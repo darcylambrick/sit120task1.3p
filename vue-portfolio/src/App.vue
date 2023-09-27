@@ -1,13 +1,14 @@
-<script setup>
-import customHeader from './components/customHeader.vue'
+<script>
+
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-      <customHeader msg="Darcy Lambrick" />
+      <custom-header msg="Darcy Lambrick" />
     </div>
   </header>
+    <router-view></router-view>
 </template>
 
 <style scoped>

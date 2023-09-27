@@ -10,15 +10,15 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <div class="topnav" id="myTopnav">
-    <a href="/index.html" class="active">Home</a>
+    <router-link to="/home">Home</router-link>
     <a href="/project1.html">Project 1</a>
     <a href="/project2.html">Project 2</a>
-    <a href="/about.html">About Me</a>
+    <router-link to="/about">About Me</router-link>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
+    <p>☰</p>
   </a>
 </div>
   </div>
@@ -64,7 +64,7 @@ h3 {
 }
 
 /* Add an active class to highlight the current page */
-.topnav a.active {
+.topnav a.router-link-active {
   background-color: #04AA6D;
   color: white;
 }

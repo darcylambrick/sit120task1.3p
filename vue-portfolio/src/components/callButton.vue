@@ -1,11 +1,3 @@
-<template>
-  <div id="callButton">
-    <p>You have called me {{ count }} times.</p>
-    <button @click="incrementCount">Start Call</button>
-    <button @click="() => count = 0">Reset Call Count</button>
-  </div>
-</template>
-
 <script>
 export default {
   data: function() {
@@ -22,6 +14,14 @@ export default {
   }
 };
 </script>
+
+<template>
+  <div id="callButton">
+    <p>You have called me {{ count }} times.</p>
+    <button @click="incrementCount">Start Call</button>
+    <button @click="() => count = 0">Reset Call Count</button>
+  </div>
+</template>
 
 <style>
 #callButton {
