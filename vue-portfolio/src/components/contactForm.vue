@@ -1,5 +1,11 @@
 <script>
-
+export default {
+    data () {
+      return {
+        chosenCountry:''
+      }
+    }
+  }
 </script>
 
 <template>
@@ -10,7 +16,7 @@
             <label for="fname">First Name</label>
           </div>
           <div class="col-75">
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <input required type="text" id="fname" name="firstname" placeholder="Your name..">
           </div>
         </div>
         <div class="row">
@@ -18,7 +24,7 @@
             <label for="lname">Last Name</label>
           </div>
           <div class="col-75">
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <input required type="text" id="lname" name="lastname" placeholder="Your last name..">
           </div>
         </div>
         <div class="row">
@@ -26,7 +32,7 @@
             <label for="country">Country</label>
           </div>
           <div class="col-75">
-            <select id="country" name="country">
+            <select id="country" name="country" v-model="chosenCountry" >
               <option value="australia">Australia</option>
               <option value="canada">Canada</option>
               <option value="usa">USA</option>
@@ -42,7 +48,8 @@
           </div>
         </div>
         <div class="row">
-          <input type="submit" value="Submit">
+          <input v-if="chosenCountry=='australia'" type="submit" value="Submit" >
+          <input v-else type="submit" value="Applications from outside Australia are unlikely to be accepted" >
         </div>
       </form>
     </div>

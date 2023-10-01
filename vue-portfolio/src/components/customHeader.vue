@@ -14,8 +14,10 @@ defineProps({
 
     <div class="topnav" id="myTopnav">
     <router-link to="/home">Home</router-link>
-    <a href="/project1.html">Project 1</a>
-    <a href="/project2.html">Project 2</a>
+    <router-link to="/project1">Project 1</router-link>
+    <!-- <a href="/project1.html">Project 1</a> -->
+    <router-link to="/project2">Project 2</router-link>
+    <!-- <a href="/project2.html">Project 2</a> -->
     <router-link to="/about">About Me</router-link>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <p>☰</p>

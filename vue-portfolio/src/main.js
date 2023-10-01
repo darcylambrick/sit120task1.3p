@@ -6,6 +6,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import AboutPage from './about.vue'
 import HomePage from './home.vue'
+import Project1 from "./project1.vue"
+import Project2 from "./project2.vue"
 import CallButton from './components/callButton.vue'
 import CustomHeader from './components/customHeader.vue'
 import ContactForm from './components/contactForm.vue'
@@ -15,6 +17,8 @@ const router = createRouter({
     routes: [
         { path: '/about', component: AboutPage },
         { path: '/home', component: HomePage },
+        { path: '/project1', component: Project1 },
+        { path: '/project2', component: Project2 },
     ]
 });
 
